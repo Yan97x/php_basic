@@ -2,6 +2,7 @@
     include 'classes/postSeeder.php';
     $posts = wad\PostSeeder::seed();
     $posts[0]->addcomment("Brett", "Good");
+    $posts[0]->addcomment("Yan", "Thanks");
     $posts[1]->addcomment("Anonymous", "GOD");
     $posts[2]->addcomment("Larry", "HAHAHA");
 ?>
