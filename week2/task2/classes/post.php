@@ -1,6 +1,5 @@
 <?php
 namespace wad;
-
 class Post{
     protected $user;
     protected $message;
