@@ -4,10 +4,14 @@ class Post{
     protected $user;
     protected $message;
     protected $comments;
+    protected $image;
+    protected $date;
 
-    function __construct($user, $message){
+    function __construct($user, $message, $date){
         $this->user = $user;
         $this->message = $message;
+        $this->date = $date;
+        $this->date = '../images/default.jpg';
         $this->comments = [];
     }
 
@@ -17,6 +21,14 @@ class Post{
 
     function getMessage(){
         return $this->message;
+    }
+
+    function getImage(){
+        return $this->image;
+    }
+
+    function getDate(){
+        return $this->date;
     }
 
     function getComment(){
