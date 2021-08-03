@@ -1,7 +1,7 @@
 <?php
-    include 'classes/post.php';
-    $post = new Post("Yan", "Hi!");
-    var_dump($post->getUser);
+    include 'classes/postSeeder.php';
+    $posts = PostSeeder::seed();
+    var_dump($posts);
     exit;
 ?>
 <!DOCTYPE html>
@@ -14,6 +14,7 @@
     <body>
         <div id = "content">
             <h1>Social Media</h1>
+            <br/>
             <?php foreach($posts as $post) { ?>
                 <div id = "post">
                 <img src="<?= $post['image'] ?>" width="60" height="60" alt="user image">
