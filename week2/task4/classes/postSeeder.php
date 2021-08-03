@@ -12,7 +12,7 @@ class PostSeeder{
     /**
      * This function returns an array of prepopulated posts
      */
-    public static function seed(){
+    public static function seed():array {
         $posts = [];
         
         /* Setting posts */

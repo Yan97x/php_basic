@@ -13,7 +13,7 @@ class Comment{
     /**
      * Creating the starter default value
      */
-    function __construct($user, $message, $date){
+    function __construct(string $user, string $message, string $date){
         $this->user = $user;
         $this->message = $message;
         $this->date = $date;
@@ -23,28 +23,28 @@ class Comment{
     /**
      * Returens user
      */
-    function getUser(){
+    function getUser():string {
         return $this->user;
     }
 
     /**
      * Returens message
      */
-    function getMessage(){
+    function getMessage():string {
         return $this->message;
     }
 
     /**
      * Returens image
      */
-    function getImage(){
+    function getImage():string {
         return $this->image;
     }
 
     /**
      * Returens date
      */
-    function getDate(){
+    function getDate():string {
         return $this->date;
     }
 }
