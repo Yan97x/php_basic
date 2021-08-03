@@ -5,11 +5,17 @@
     width: 500px;
     padding: 20px;
 }
+
+#post:hover{
+    border-color:blue;
+}
+
 .shadow {
     -moz-box-shadow:    3px 3px 5px 6px #ccc;
     -webkit-box-shadow: 3px 3px 5px 6px #ccc;
     box-shadow:         3px 3px 5px 6px #ccc;
   }
+
 #content{
     width: 800px;
     margin: auto;
