@@ -11,7 +11,7 @@ class Post{
         $this->user = $user;
         $this->message = $message;
         $this->date = $date;
-        $this->date = '../images/defult.jpg';
+        $this->image = '../images/defult.jpg';
         $this->comments = [];
     }
 
