@@ -1,8 +1,8 @@
 <?php
     include 'classes/postSeeder.php';
-    $posts = PostSeeder::seed();
-    var_dump($posts);
-    exit;
+    $posts = wad\PostSeeder::seed();
+    //var_dump($posts);
+    //exit;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,12 +14,11 @@
     <body>
         <div id = "content">
             <h1>Social Media</h1>
-            <br/>
             <?php foreach($posts as $post) { ?>
                 <div id = "post">
                 <img src="<?= $post['image'] ?>" width="60" height="60" alt="user image">
-                <?= $post['name'] ?>
-                <?= $post['message'] ?>
+                <?= $post-> getUser() ?>
+                <?= $post-> getMessage() ?>
                 <?= $post['date'] ?>
                 </div>
             <?php } ?>
