@@ -13,7 +13,7 @@
         <div id = "content">
             <h1>Social Media</h1>
             <?php foreach($posts as $post) { ?>
-                <div id = "post">
+                <div styl="border: 1px solid #000;">
                 <?= $post->getUser() ?>
                 <?= $post->getMessage() ?>
                 </div>
