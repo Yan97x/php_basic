@@ -36,7 +36,7 @@ class Post{
     }
 
     function addcomment($user, $comment){
-        $this->$comments[] = array("user" => $user, "comment" => $comment);
+        $this->comments[] = array("user" => $user, "comment" => $comment);
     }
 }
 ?>
