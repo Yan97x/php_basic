@@ -14,8 +14,8 @@
             <h1>Social Media</h1>
             <?php foreach($posts as $post) { ?>
                 <div id = "post">
-                <?= $post->getUser() ?>
-                <?= $post->getMessage() ?>
+                    <?= $post->getUser() ?>
+                    <?= $post->getMessage() ?>
                 </div>
             <?php } ?>
         </div>
