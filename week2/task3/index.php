@@ -17,7 +17,7 @@
         <div id = "content">
             <h1>Social Media</h1>
             <?php foreach($posts as $post) { ?>
-                <div id = "post">
+                <div id = "post" class="shadow">
                     <img class="profile" src="<?=$post->getImage() ?>"/>
                     <p><?= $post->getUser() ?></p>
                     <p><?= $post->getDate() ?></p>
