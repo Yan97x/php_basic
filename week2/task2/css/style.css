@@ -1,6 +1,7 @@
 #post{
     border-color: black;
     border-style: solid;
+    width:500px;
     margin: 50px;
     padding: 20px;
     float: right;
