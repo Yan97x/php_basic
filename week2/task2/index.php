@@ -17,7 +17,7 @@
             <h1>Social Media</h1>
             <?php foreach($posts as $post) { ?>
                 <div id = "post">
-                    <img src="<?= $post->getImage() ?>">
+                    <img src="<?=$post->getImage() ?>"/>
                     <p><?= $post->getUser() ?></p>
                     <p><?= $post->getDate() ?></p>
                     <p><?= $post->getMessage() ?></p>
