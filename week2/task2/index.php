@@ -15,9 +15,9 @@
             <?php foreach($posts as $post) { ?>
                 <div id = "post">
                     <img src="<?= $post->getImage() ?>">
-                    <?= $post->getUser() ?>
-                    <?= $post->getDate() ?>
-                    <?= $post->getMessage() ?>
+                    <p><?= $post->getUser() ?></p>
+                    <p><?= $post->getDate() ?></p>
+                    <p><?= $post->getMessage() ?></p>
                 </div>
             <?php } ?>
         </div>
