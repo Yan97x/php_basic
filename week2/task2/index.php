@@ -14,10 +14,8 @@
             <h1>Social Media</h1>
             <?php foreach($posts as $post) { ?>
                 <div id = "post">
-                <img src="<?= $post['image'] ?>" width="60" height="60" alt="user image">
                 <?= $post->getUser() ?>
                 <?= $post->getMessage() ?>
-                <?= $post['date'] ?>
                 </div>
             <?php } ?>
         </div>
