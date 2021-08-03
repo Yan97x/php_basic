@@ -1,0 +1,12 @@
+#post{
+    border-color: black;
+    border-style: solid;
+    margin: 50px;
+    padding: 20px;
+    float: right;
+}
+
+#content{
+    width: 800px;
+    margin: auto;
+}
