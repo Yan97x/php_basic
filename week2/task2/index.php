@@ -1,7 +1,7 @@
 <?php
     include 'classes/post.php';
     $post = new Post("Yan", "Hi!");
-    var_dump($post->getUser());
+    var_dump($post->getUser);
     exit;
 ?>
 <!DOCTYPE html>
