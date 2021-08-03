@@ -1,8 +1,6 @@
 <?php
     include 'classes/postSeeder.php';
     $posts = wad\PostSeeder::seed();
-    //var_dump($posts);
-    //exit;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,8 +15,8 @@
             <?php foreach($posts as $post) { ?>
                 <div id = "post">
                 <img src="<?= $post['image'] ?>" width="60" height="60" alt="user image">
-                <?= $post-> getUser() ?>
-                <?= $post-> getMessage() ?>
+                <?= $post->getUser() ?>
+                <?= $post->getMessage() ?>
                 <?= $post['date'] ?>
                 </div>
             <?php } ?>
