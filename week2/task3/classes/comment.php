@@ -2,12 +2,11 @@
 namespace wad;
 
 /**
- * This class consist with these following properties: user, message, comments, image, date
+ * This class consist with these following properties: user, message, image, date
  */
-class Post{
+class Comment{
     protected $user; 
     protected $message;
-    protected $comments;
     protected $image;
     protected $date;
 
@@ -19,7 +18,6 @@ class Post{
         $this->message = $message;
         $this->date = $date;
         $this->image = 'images/defult.jpg';
-        $this->comments = [];
     }
 
     /**
@@ -48,20 +46,6 @@ class Post{
      */
     function getDate(){
         return $this->date;
-    }
-
-    /**
-     * Returens comment
-     */
-    function getComment(){
-        return $this->comments;
-    }
-
-    /**
-     * Add a command to this post
-     */
-    function addcomment($comment){
-        $this->comments[] = $comment;
     }
 }
 ?>

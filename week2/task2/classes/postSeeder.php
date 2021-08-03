@@ -3,7 +3,13 @@ namespace wad;
 use wad\Post;
 include 'post.php';
 
+/**
+ * This class contains a function to mock up some posts 
+ */
 class PostSeeder{
+    /**
+     * This function returns an array of prepopulated posts
+     */
     public static function seed(){
         $posts = [];
         $posts[] = new Post("Yan", "Hi!", "01/01/2020");
