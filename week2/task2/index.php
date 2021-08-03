@@ -1,6 +1,9 @@
 <?php
     include 'classes/postSeeder.php';
     $posts = wad\PostSeeder::seed();
+    $posts[0]->addcomment("Brett", "Good");
+    $posts[1]->addcomment("Anonymous", "GOD");
+    $posts[2]->addcomment("Larry", "HAHAHA");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,6 +21,13 @@
                     <p><?= $post->getUser() ?></p>
                     <p><?= $post->getDate() ?></p>
                     <p><?= $post->getMessage() ?></p>
+                    <?php $comments = $post->getComment();
+                    foreach($comments as $comment) { ?>
+                        <hr>
+                        <p><?=$comment['user']; ?></p>
+                        <p><?=$comment['comment']; ?></p>
+                        <hr>
+                    <?php } ?>
                 </div>
             <?php } ?>
         </div>
