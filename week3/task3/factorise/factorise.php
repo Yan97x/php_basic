@@ -8,18 +8,16 @@ include "includes/defs.php";
 
 # Set $number to the value entered in the form.
 $number = $_GET['number'];
+$error = "";
 
 # Check $number is nonempty, numeric and between 2 and PHP_MAX_INT = 2^31-1.
 # (PHP makes it difficult to do this naturally; see the manual.)
 if (empty($number)) {
-    echo "Error: Missing value\n";
-    exit;
+    $error = "Error: Missing value";
 } else if (!is_numeric($number)) {
-    echo "Error: Nonnumeric value: $number\n";
-    exit;
+    $error = "Error: Nonnumeric value: $number";
 } else if ($number < 2 || $number != strval(intval($number))) {
-    echo "Error: Invalid number: $number\n";
-    exit;
+    $error = "Error: Invalid number: $number";
 } else {
     # Set $factors to the array of factors of $number.
     $factors = factors($number);
@@ -37,10 +35,18 @@ if (empty($number)) {
   
   <body>  
     <h1>Factorisation</h1>
+    <?php 
+      if (empty($error))
+        echo "$number = $factors";
+      else  
+      echo $error; 
+    ?>
 
-    <p><?php echo "$number = $factors"; ?></p>
-
-    <p><a href="index.html">Another?</a></p>
+    <h3>Another?</h3>
+    <form method="get" action="factorise.php">
+      <p>Number to factorise: <input type="text" name="number" value="<?=$number ?>">
+      <p><input type="submit" value="Factorise it!">
+    </form>
     <hr>
     <p>
     Sources:
