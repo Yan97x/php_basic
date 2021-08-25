@@ -8,6 +8,12 @@ include "pms.php";
 function search($name, $year, $state) {
     global $pms; 
 
+	if (empty($name) && 
+		empty($year) && 
+		empty($state)) {
+		$pms = "nonedata";
+	}
+
     // Filter $pms by $name
     if (!empty($name)) {
 		$results = array();
@@ -22,13 +28,22 @@ function search($name, $year, $state) {
     // Filter $pms by $year
     if (!empty($year)) {
 		$results = array();
-		foreach ($pms as $pm) {
-			if (strpos($pm['from'], $year) !== FALSE || 
-				strpos($pm['to'], $year) !== FALSE) {
-				$results[] = $pm;
-			}
+		
+		if (strval($year) !== strval(intval($year)) && 
+			empty($state) && 
+			empty($name)){
+			$pms = "year is not number";
 		}
-		$pms = $results;
+		else {
+			foreach ($pms as $pm) {
+				if (strpos($pm['from'], $year) !== FALSE || 
+					strpos($pm['to'], $year) !== FALSE) {
+					$results[] = $pm;
+				}
+			}
+			$pms = $results;
+		}
+			
     }
 
     // Filter $pms by $state

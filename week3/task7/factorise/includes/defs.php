@@ -19,4 +19,21 @@ function factors($n) {
     }
     return $factors;
 }
+
+define("FILE", "previous.txt");
+function writeFator($number, $factors) {
+    $f = fopen(FILE,"a");
+    fwrite($f, "$number = $factors\n");
+    fclose($f);
+}
+
+function showFator() {
+    $f = fopen(FILE, "r");
+    while (!feof($f)) {
+        $factors = fgets($f,4096);
+        echo "<p>$factors</p>\n";
+    }
+    fclose($f);
+}
+
 ?>
