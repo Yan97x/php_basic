@@ -1,22 +1,38 @@
 @extends('layouts.master')
 
 @section('title')
-  Add Item
+  Add Client
 @endsection
 
 @section('content')
-  <h1>Add Item</h1>
+  <h1>Add Client</h1>
   <form method="post" action="{{url("add_item_action")}}">
     {{csrf_field()}}
     <p>  
-      <lable>Summary</lable>
-      <input type="text" name="summary">
+      <lable>Name:</lable>
+      <input type="text" name="names">
     </p>
     <p>
-      <label>Details</label>
-      <textarea type="text" name="details"></textarea><br>
+      <label>Age:</label>
+      <input type="text" name="age">
+    </p>
+    <p>
+      <label>Phone:</label>
+      <input type="text" name="phone">
+    </p>
+    <p>
+      <label>License:</label>
+      <input type="text" name="license">
+    </p>
+    <p>
+      <label>License Type:</label>
+      <input type="text" name="licenseType">
     </p>
     <input type="submit" value="Add">
-  
   </form>
+  @if($errors -> count()>0)
+    @foreach($errors->all() as $error)
+      <p>{{$error}}</p>
+    @endforeach
+  @endif
 @endsection

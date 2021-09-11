@@ -4,11 +4,14 @@
   Item list
 @endsection
   
-@section('content')  
+@section('content') 
+  <div class="tc">
+    <img src="../image/{{$item-> picture}}" alt="" style="width:600px;height:420px;">   
     <h1>{{$item -> summary}}</h1>
-    <p>{{$item -> details}}</p>
+      <p>Rego: {{$item -> rego}}</p>
+      <p>Year: {{$item -> years}}</p>
+      <p>Odometer: {{$item -> odometer}}</p>
+      <p>Color: {{$item -> color}}</p>
+  </div>
 
-    <a href="{{url("item_delete/$item->id")}}" >Delete Item </a><br>
-    <a href="{{url("item_update/$item->id")}}" >Update Item </a><br>
-    <a href="{{url("/")}}" >Home Page </a><br>
 @endsection
