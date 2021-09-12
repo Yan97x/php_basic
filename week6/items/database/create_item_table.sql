@@ -36,3 +36,15 @@ insert into client values (null, "Emma", "30", "0421342156", "20949201", "C");
 insert into client values (null, "Noah", "35", "0421352301", "25920192", "C");
 insert into client values (null, "Elijah", "21", "0495920192", "22910586", "C");
 insert into client values (null, "Oliver", "19", "0492013928", "29105829", "C");
+
+
+
+drop table if exists booking;
+create table booking (    
+    id integer not null primary key autoincrement,    
+    names varchar(20) not null,
+    rego varchar(6) not null,
+    license varchar(20) not null,
+    starting varchar(20) not null,
+    returning varchar(20) not null
+); 

@@ -15,8 +15,10 @@
                   <ul class="clean">
                     @foreach ($items as $item)
                     <li class="col-md-4 inb fz1 mb3">
-                      <img src="image/{{$item-> picture}}" alt="" style="width:300px;height:220px;"></br> 
-                      <a href="{{url("item_detail/$item->id")}}" >{{$item -> rego}}</a>
+                    <a href="{{url("item_detail/$item->id,$item->rego")}}" >
+                      <img src="image/{{$item-> picture}}" alt="" style="width:300px;height:220px;"></br>
+                      </a>
+                      {{$item -> rego}}
                     </li>
                     @endforeach
                   </ul>

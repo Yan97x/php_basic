@@ -8,26 +8,26 @@
   <h1>Add Client</h1>
   <form method="post" action="{{url("add_item_action")}}">
     {{csrf_field()}}
-    <p>  
-      <lable>Name:</lable>
-      <input type="text" name="names">
-    </p>
-    <p>
-      <label>Age:</label>
-      <input type="text" name="age">
-    </p>
-    <p>
-      <label>Phone:</label>
-      <input type="text" name="phone">
-    </p>
-    <p>
-      <label>License:</label>
-      <input type="text" name="license">
-    </p>
-    <p>
-      <label>License Type:</label>
-      <input type="text" name="licenseType">
-    </p>
+    <div class="mb1">  
+      <label class="label">Name:</label>
+      <input type="text" name="names" class="input">
+    </div>
+    <div class="mb1">
+    <label class="label">Age:</label>
+      <input type="text" name="age" class="input">
+    </div>
+    <div class="mb1">
+    <label class="label">Phone:</label>
+      <input type="text" name="phone" class="input">
+    </div>
+    <div class="mb1">
+    <label class="label">License:</label>
+      <input type="text" name="license" class="input">
+      </div>
+    <div class="mb1">
+    <label class="label">LicenseType:</label>
+      <input type="text" name="licenseType" class="input">
+      </div>
     <input type="submit" value="Add">
   </form>
   @if($errors -> count()>0)
