@@ -118,6 +118,9 @@ Route::post('booking', function(){
     $starting = request('starting');
     $returning = request('returning');
     $id = add_book($names, $rego, $license, $starting, $returning);
+
+    $cartime = DB::select("select cartimes from item where rego='$rego'")[0]->cartimes+1;
+    DB::update("UPDATE item SET cartimes='$cartime' WHERE rego='$rego'");
     return redirect(url("booking"));
 });
 
@@ -142,6 +145,13 @@ Route::post("return", function(){
         $sql2 = "DELETE FROM booking WHERE id='$bookingId'";
         DB::delete($sql2);
         return redirect(url("booking"));
+});
+
+# ranking routing
+Route::get('ranking', function(){
+    $sql = "select * from item order by cartimes desc";
+    $item = DB::select($sql);
+    return view("items.ranking") ->with('items', $item);
 });
 
 function add_item($names, $age, $phone, $license, $licenseType){

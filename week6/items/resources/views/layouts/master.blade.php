@@ -35,6 +35,9 @@
                 <li class="nav-item">
                   <a class="nav-link" href="{{url("https://s5191915.elf.ict.griffith.edu.au/webAppDev/week6/items/public/return")}}">Return</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url("https://s5191915.elf.ict.griffith.edu.au/webAppDev/week6/items/public/ranking")}}">Ranking</a>
+                </li>
               </ul>
             </div>
         </nav> @yield('content')

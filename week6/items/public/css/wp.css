@@ -11,7 +11,8 @@ h2 { font-weight: bold; color: #006666; }
 h3 { font-weight: bold; color: #009933; }
 h4 { font-weight: bold; font-style: italic; color: #669900; }
 
-p { margin-left: 0em; }
+p { margin-left: 0rem; }
+.pl2 { margin-left: 2rem; }
 
 table { font-family: Verdana, Arial, Helvetica, sans-serif; }
 caption { font-weight: bold; }
@@ -51,3 +52,4 @@ a:hover { text-decoration: underline; }
 .tl{text-align: left;}
 .label{width:6rem;}
 .input{width: 11rem;}
+li {list-style-type:none;}

@@ -6,17 +6,18 @@ create table item (
     years varchar(4) not null,
     odometer varchar(20) not null,
     picture varchar(80) not null,
-    color varchar(10) not null
+    color varchar(10) not null,
+    cartimes integer(5)
 ); 
-insert into item values (null, "Hyundai Veloster", "AC1HL2", "2021", "12421", "veloster.jpg", "White");
-insert into item values (null, "Mzada Mazda3", "B2A1H5", "2021", "2131", "mazda3.jpg", "Red");
-insert into item values (null, "Nissan Sentra", "WS1N1D", "2021", "24112", "sentra.jpg", "White");
-insert into item values (null, "Subaru wrx sti", "XSWL12", "2021", "9090", "wrx_sti.jpg", "Silver");
-insert into item values (null, "Toyota 4runner", "WIZ01A", "2021", "4213", "4runner.jpg", "Black");
-insert into item values (null, "Toyota Avalon","WIOZ22", "2021", "4921", "avalon.jpg", "Black");
-insert into item values (null, "Volkswagen Jetta","XICOZ1", "2021", "12110", "jetta.jpg", "Red");
-insert into item values (null, "Toyota Corolla","DW231A", "2022", "2910", "corolla.jpg", "White");
-insert into item values (null, "Toyota Prius","SIWOZ2", "2022", "7921", "prius.jpg", "Silver");
+insert into item values (null, "Hyundai Veloster", "AC1HL2", "2021", "12421", "veloster.jpg", "White", 0);
+insert into item values (null, "Mzada Mazda3", "B2A1H5", "2021", "2131", "mazda3.jpg", "Red", 0);
+insert into item values (null, "Nissan Sentra", "WS1N1D", "2021", "24112", "sentra.jpg", "White", 0);
+insert into item values (null, "Subaru wrx sti", "XSWL12", "2021", "9090", "wrx_sti.jpg", "Silver", 0);
+insert into item values (null, "Toyota 4runner", "WIZ01A", "2021", "4213", "4runner.jpg", "Black", 0);
+insert into item values (null, "Toyota Avalon","WIOZ22", "2021", "4921", "avalon.jpg", "Black", 0);
+insert into item values (null, "Volkswagen Jetta","XICOZ1", "2021", "12110", "jetta.jpg", "Red", 0);
+insert into item values (null, "Toyota Corolla","DW231A", "2022", "2910", "corolla.jpg", "White", 0);
+insert into item values (null, "Toyota Prius","SIWOZ2", "2022", "7921", "prius.jpg", "Silver", 0);
 
 
 
