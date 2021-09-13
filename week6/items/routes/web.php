@@ -118,7 +118,7 @@ Route::post('booking', function(){
     $starting = request('starting');
     $returning = request('returning');
     $id = add_book($names, $rego, $license, $starting, $returning);
-
+    #adding booking time to cartimes when booking
     $cartime = DB::select("select cartimes from item where rego='$rego'")[0]->cartimes+1;
     DB::update("UPDATE item SET cartimes='$cartime' WHERE rego='$rego'");
     return redirect(url("booking"));
@@ -152,6 +152,10 @@ Route::get('ranking', function(){
     $sql = "select * from item order by cartimes desc";
     $item = DB::select($sql);
     return view("items.ranking") ->with('items', $item);
+});
+
+Route::get('documentation', function(){
+    return view("items.documentation");
 });
 
 function add_item($names, $age, $phone, $license, $licenseType){

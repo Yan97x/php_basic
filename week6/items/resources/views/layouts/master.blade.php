@@ -37,6 +37,8 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{{url("https://s5191915.elf.ict.griffith.edu.au/webAppDev/week6/items/public/ranking")}}">Ranking</a>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url("https://s5191915.elf.ict.griffith.edu.au/webAppDev/week6/items/public/documentation")}}">Documentation</a>
                 </li>
               </ul>
             </div>
