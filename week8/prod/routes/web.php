@@ -20,7 +20,7 @@ Route::resource('product', ProductController::class);
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.home');
 });
 
 
